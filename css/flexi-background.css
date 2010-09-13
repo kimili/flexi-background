@@ -1,0 +1,87 @@
+/*
+	File Overview:	Flexi-background styles.
+	Author:			Michael Bester <http://kimili.com>
+	Description:	Sets up styling for full-screen flexible backgrounds.
+					See <http://kimili.com/journal/flexible-scalable-background-image> for more info.
+	
+	Licence:		Copyright 2010, Michael Bester.
+					Released under the MIT license <http://opensource.org/licenses/mit-license.php>
+	
+*/
+
+body { 
+	background-attachment:		fixed;
+	background-color:			#333;
+	background-image:			url(../example/img/bg_page.jpg); 
+	background-position:		top center; 
+	background-repeat:			no-repeat; 
+	
+	margin:						0;
+	padding:					0;
+
+	background-size:			cover;
+	-moz-background-size:		cover;
+	-webkit-background-size:	cover;
+}
+
+/*
+	This next definition doesn't allow the background to get any smaller
+	than a predefined size (800x600px in this case). Change the values
+	here to match your background image size. The configuration in the
+	flexi-background javascript file should also match these values.
+*/
+
+@media only all and (max-width: 800px) and (max-height: 600px) {
+	body {		
+		background-size:			800px 600px;
+		-moz-background-size:		800px 600px;
+		-webkit-background-size:	800px 600px;
+	}
+}
+
+/*
+	The next 2 definitions are for support in iOS devices.
+ 	Since they don't recoginze the 'cover' keyword for background-size
+ 	we need to simulate it with percentages and orientation
+*/
+
+@media only handheld and (orientation: portrait) {
+	.touch body {
+		-webkit-background-size: auto 100%;
+	}
+}
+
+@media only handheld and (orientation: landscape) {
+	.touch body {
+		-webkit-background-size: 100% auto;
+	}
+}
+/* All of the following styles only get used when background-size isn't supported */
+
+img#expando { 
+	display:	none;
+	position:	absolute; 
+	z-index:	1;
+	 
+	-ms-interpolation-mode: bicubic; 
+} 
+
+.wide img#expando, 
+.tall img#expando { 
+	display: 	block; 
+} 
+
+.wide img#expando { 
+	height: 	auto;
+	width: 		100%; 
+} 
+
+.tall img#expando { 
+	height:		100%;
+	width:		auto; 
+}
+
+.ie6fixed {
+	position:	absolute;
+	top:		expression((ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + 'px') !important;
+}
