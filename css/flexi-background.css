@@ -45,13 +45,13 @@ body {
  	we need to simulate it with percentages and orientation
 */
 
-@media only handheld and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
 	.touch body {
 		-webkit-background-size: auto 100%;
 	}
 }
 
-@media only handheld and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
 	.touch body {
 		-webkit-background-size: 100% auto;
 	}
