@@ -32,10 +32,9 @@ License:
 	/*
 		Are we using a touch device?
 	*/
-	if (typeof Touch === "object") {
+	if (typeof Touch === 'object') {
 		try {
-			var html = document.getElementsByTagName('html')[0];
-			html.className = html.className + " touch";
+			$('html').addClass('touch');
 		} catch(e) {}
 	};
 	
