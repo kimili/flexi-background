@@ -12,13 +12,13 @@ First thing to do is to define the background image you want to use on the body 
 
 bc. body { 
 	background-attachment:		fixed;
-	background-color:				#333;
-	background-image:				url(/path/to/your/background/image.jpg); 
-	background-position:			top center; 
-	background-repeat:			no-repeat; 
-	margin:							0;
-	padding:							0;
-	background-size:				cover;
+	background-color:		#333;
+	background-image:		url(/path/to/your/background/image.jpg); 
+	background-position:		top center; 
+	background-repeat:		no-repeat; 
+	margin:				0;
+	padding:			0;
+	background-size:		cover;
 	-moz-background-size:		cover;
 	-webkit-background-size:	cover;
 }
@@ -27,7 +27,7 @@ p. Feel free to change other background properties like @background-color@ and @
 
 bc. @media only all and (max-width: 800px) and (max-height: 600px) {
 	body {		
-		background-size:				800px 600px;
+		background-size:		800px 600px;
 		-moz-background-size:		800px 600px;
 		-webkit-background-size:	800px 600px;
 	}
