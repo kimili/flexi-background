@@ -1,0 +1,51 @@
+h1. The Flexible Scalable Background Image
+
+This is an approach to set up a full-window background image which scales to window size, but doesn't get smaller than a certain, predefined size. It is an update to an "older approach":http://kimili.com/journal/flexible-scalable-background-image which I published in 2009. This update takes advantage of CSS3 capabilities to achieve the desired effect and falls back to Javascript when the necessary CSS isn't supported. This also means it now works in iOS devices, as well as in all major desktop browsers.
+
+h2. Setup
+
+In order to utilize this, you'll need to include the flexi-background JavaScript and CSS files in your site. There are a few configurations and tweaks to make, as follows:
+
+h3. The CSS
+
+First thing to do is to define the background image you want to use on the body element:
+
+bc. body { 
+	background-attachment:		fixed;
+	background-color:			#333;
+	background-image:			url(/path/to/your/background/image.jpg); 
+	background-position:		top center; 
+	background-repeat:			no-repeat; 
+	
+	margin:						0;
+	padding:					0;
+
+	background-size:			cover;
+	-moz-background-size:		cover;
+	-webkit-background-size:	cover;
+}
+
+p. Feel free to change other background properties like @background-color@ and @background-position@, but the rest of the definition should stay as is. The next definition also needs your attention. It is:
+
+bc. @media only all and (max-width: 800px) and (max-height: 600px) {
+	body {		
+		background-size:			800px 600px;
+		-moz-background-size:		800px 600px;
+		-webkit-background-size:	800px 600px;
+	}
+}
+
+p. You need to change the height and width values there to match the the size you don't want the image to go below. Typically, you'd set this to match the native image size, but if you don't want to do that, you need to make sure what you set here matches the aspect ratio of your background image. For instance, if your background image is 800px wide by 600px tall, you can set these numbers to 400px by 300px or 600px by 450px. If you don't match the image aspect ratio, you'll get unpredictable jumpiness when resizing the window.
+
+h3. The JavaScript
+
+There's only one peice to configure in the JavaScript. Go ahead and find the follow right at the top of the script:
+
+bc. var bgImageSize = {
+	width	: 800,
+	height	: 600
+};
+
+p. Those height and width values should be changed to match the minimum height and width threshold you set up in the CSS above.
+
+That's it--there's nothing more to configure. Enjoy!
