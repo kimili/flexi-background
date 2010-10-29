@@ -46,13 +46,13 @@ body {
 */
 
 @media only screen and (orientation: portrait) and (device-width: 320px), (device-width: 768px) {
-	.touch body {
+	body {
 		-webkit-background-size: auto 100%;
 	}
 }
 
 @media only screen and (orientation: landscape) and (device-width: 320px), (device-width: 768px) {
-	.touch body {
+	body {
 		-webkit-background-size: 100% auto;
 	}
 }

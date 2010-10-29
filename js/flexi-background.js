@@ -28,13 +28,6 @@ License:
 	
 	/*	END CONFIGURATION */
 	
-	/*
-		Are we using a touch device?
-	*/
-	if ('ontouchstart' in window) {
-		document.getElementsByTagName('html').className += ' touch';
-	};
-	
 	/**
 		Detect support for CSS background-size. No need for any more javascript if background-size is supported.
 		Property detection adapted from the most excellent Modernizr <http://modernizr.com>
