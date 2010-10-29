@@ -45,13 +45,13 @@ body {
  	we need to simulate it with percentages and orientation
 */
 
-@media only screen and (orientation: portrait) {
+@media only screen and (orientation: portrait) and (device-width: 320px), (device-width: 768px) {
 	.touch body {
 		-webkit-background-size: auto 100%;
 	}
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (device-width: 320px), (device-width: 768px) {
 	.touch body {
 		-webkit-background-size: 100% auto;
 	}
@@ -79,9 +79,4 @@ img#expando {
 .tall img#expando { 
 	height:		100%;
 	width:		auto; 
-}
-
-.ie6fixed {
-	position:	absolute;
-	top:		expression((ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop) + 'px') !important;
 }
