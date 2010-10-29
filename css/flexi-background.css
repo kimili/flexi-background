@@ -12,7 +12,7 @@
 body { 
 	background-attachment:		fixed;
 	background-color:			#333;
-	background-image:			url(../example/img/bg_page.jpg); 
+	background-image:			url(../example/img/hanging-on.jpg); 
 	background-position:		top center; 
 	background-repeat:			no-repeat; 
 	
@@ -26,16 +26,16 @@ body {
 
 /*
 	This next definition doesn't allow the background to get any smaller
-	than a predefined size (800x600px in this case). Change the values
+	than a predefined size (640x426px in this case). Change the values
 	here to match your background image size. The configuration in the
 	flexi-background javascript file should also match these values.
 */
 
-@media only all and (max-width: 800px) and (max-height: 600px) {
+@media only all and (max-width: 640px) and (max-height: 426px) {
 	body {		
-		background-size:			800px 600px;
-		-moz-background-size:		800px 600px;
-		-webkit-background-size:	800px 600px;
+		background-size:			640px 426px;
+		-moz-background-size:		640px 426px;
+		-webkit-background-size:	640px 426px;
 	}
 }
 
