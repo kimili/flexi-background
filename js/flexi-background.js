@@ -25,14 +25,14 @@ License:
 		Define the size of our background image
 	*/
 	var bgImageSize = {
-		width	: 800,
-		height	: 600
+		width	: 640,
+		height	: 426
 	};
 	
 	/*
 		Are we using a touch device?
 	*/
-	if (typeof Touch === 'object') {
+	if ('ontouchstart' in window) {
 		try {
 			$('html').addClass('touch');
 		} catch(e) {}
