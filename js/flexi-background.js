@@ -49,6 +49,13 @@ License:
 	};
 	
 	/**
+		We also want to leave IE6 and below out in the cold with this
+	*/
+	if ( false /*@cc_on || @_jscript_version < 5.7 @*/ ) {
+		return;
+	}
+	
+	/**
 		If we've gotten here, we don't have background-size support,
 		so we'll have to mimic it with Javascript.
 		Let's set up some variables
