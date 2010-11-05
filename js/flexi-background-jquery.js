@@ -18,7 +18,7 @@ License:
 	Released under the MIT license <http://opensource.org/licenses/mit-license.php>
 */
 
-(function(){
+(function($){
 	
 	/**
 		CONFIGURATION:
@@ -50,6 +50,13 @@ License:
 	}())) {
 		return;
 	};
+	
+	/**
+		We also want to leave IE6 and below out in the cold with this
+	*/
+	if ( $.browser.msie && parseInt($.browser.version, 10) <= 6 ) {
+		return;
+	}
 	
 	/**
 		If we've gotten here, we don't have background-size support,
@@ -146,4 +153,4 @@ License:
 	// When the document is ready, run this thing.
 	$(document).ready(initialize);
 	
-})();
+})(jQuery);
