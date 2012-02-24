@@ -37,7 +37,7 @@ p. You need to change the height and width values there to match the the native 
 
 h3. The JavaScript
 
-There's only one peice to configure in the JavaScript. Go ahead and find the follow right at the top of the script:
+There's only one piece to configure in the JavaScript. Go ahead and find the following right at the top of the script:
 
 bc. var bgImageSize = {
 	width	: 640,
