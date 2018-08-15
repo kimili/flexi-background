@@ -33,7 +33,7 @@ bc. @media only all and (max-width: 640px) and (max-height: 426px) {
 	}
 }
 
-p. You need to change the height and width values there to match the the native size of your background image. This will be the threshold below which your image will not scale smaller. The trick here is to size your background image to something that works well across many different window sizes. You'll typically have the best results if you choose an image with a landscape orientation and size it to be about the same width as your page content. Note that if you don't match the image size, you'll get unpredictable jumpiness when resizing the window in the browsers that don't support background-size.
+p. You need to change the height and width values there to match the native size of your background image. This will be the threshold below which your image will not scale smaller. The trick here is to size your background image to something that works well across many different window sizes. You'll typically have the best results if you choose an image with a landscape orientation and size it to be about the same width as your page content. Note that if you don't match the image size, you'll get unpredictable jumpiness when resizing the window in the browsers that don't support background-size.
 
 h3. The JavaScript
 
